@@ -1,109 +1,163 @@
 body {
+    margin: 0 auto;
+    padding: 0;
     width: 100%;
-    background-image: url("images/background-ornament.jpg");
-    -moz-background-size: 100%;
-    background-repeat: repeat;
+    color: white;
+}
+
+#background {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("images/back2.jpg") center;
+    background-size: cover;
+}
+
+.header {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding-top: 100px;
-    padding: 0 auto;
-    margin: 0 auto;
-    font-family: 'Source Serif 4', serif;
-    font-weight: bolder;
-    font-style: oblique;
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
+    font-size: 160px;
     text-align: center;
-    font-style: normal;
-    padding: 5px;
-    border: 5px solid black;
-    border-radius: 10px;
-    font-weight: 1000;
+    font-family: "Franklin Gothic Heavy";
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ffffff 0%, #fce047 100%);;
+    background-size: 100vw;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    text-align: left;
-    font-size: 40px;
-    font-weight: bolder;
+    font-size: 30px;
+    font-family: "Franklin Gothic Heavy";
+    text-transform: uppercase;
+    margin: 0;
 }
+
+h3 {
+    font-size: 100px;
+    text-align: center;
+    font-family: "Franklin Gothic Heavy";
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #ffffff 0%, #fce047 100%);;
+    background-size: 100vw;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
 
 p {
-    font-size: 25px;
-
+    font-family: "Franklin Gothic Demi Cond";
+    font-size: 20px;
 }
 
-.info {
+.image-container {
+    align-items: center;
+    justify-content: space-evenly;
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+}
+
+.image-container img {
+    align-self: center;
+    max-width: 200px;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+.text-container {
     display: flex;
     flex-direction: column;
-    margin: 0 100px;
-    padding: 30px;
-
+    align-self: center;
+    max-width: 1100px;
+    padding: 100px 16px;
+    margin: 0 auto;
 }
 
-.info-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 30px 0;
-    padding: 20px;
-    border-radius: 30px;
-    background: aliceblue;
+.text-container-block {
+    padding: 16px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
 }
 
-.info-block div {
-    display: flex;
-    flex-direction: column;
+.text-container-block:hover {
+    background: #fff;
+    color: #333;
+    transform: scale(1.05);
 }
 
-.info-block-img {
-    max-height: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    flex: 0 0 auto;
-    padding-right: 30px;
-
-
+.text-container-block img {
+    border: #ababab 1px solid;
+    float: left;
+    width: 300px;
+    margin: 16px;
 }
 
-.info-block-img img {
-    max-height: 400px;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-    0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+.quiz-box {
+    margin-top: 130px;
+    margin-bottom: 160px;
 }
 
-details {
-    font: 16px "Open Sans", Calibri, sans-serif;
-    width: 620px;
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 80px;
+    }
+    h3{
+        font-size: 60px;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 50px;
+    }
+    h3{
+        font-size: 35px;
+    }
 }
 
-details > summary {
-    border: none;
-    cursor: pointer;
-    list-style: none;
-}
-
-summary::after{
-    content: '';
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-size: contain !important;
-    background: url("images/arrow.png") center;
-}
-
-.info-block-exp {
-    margin: 30px 0;
-    padding: 20px;
-    border-radius: 30px;
-    background: aliceblue;
+@media (max-width: 400px) {
+    h1 {
+        font-size: 40px;
+    }
+    h3{
+        font-size: 30px;
+    }
 }
